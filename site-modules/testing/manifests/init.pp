@@ -7,5 +7,6 @@ class testing {
   } 
   tidy { 'clear ca cert':
     path => $certpath,
+    before => Class['puppet_enterprise::profile::controller'],
   }
 }
